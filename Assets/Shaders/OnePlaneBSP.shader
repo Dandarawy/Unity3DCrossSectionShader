@@ -1,4 +1,4 @@
-﻿Shader "CrossSection/StandardBSPartitioning" {
+﻿Shader "CrossSection/OnePlaneBSP" {
 	Properties{
 		_Color("Color", Color) = (1,1,1,1)
 		_CrossColor("Cross Section Color", Color) = (1,1,1,1)
@@ -7,9 +7,10 @@
 		_Metallic("Metallic", Range(0,1)) = 0.0
 		_PlaneNormal("PlaneNormal",Vector) = (0,1,0,0)
 		_PlanePosition("PlanePosition",Vector) = (0,0,0,1)
+		_StencilMask("Stencil Mask", Range(0, 255)) = 255
 	}
 	SubShader {
-		Tags { "RenderType"="Transparent" }
+		Tags { "RenderType"="Opaque" }
 		//LOD 200
 		Stencil
 		{

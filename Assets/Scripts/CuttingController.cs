@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 //[ExecuteInEditMode]
-public class CutterControl : MonoBehaviour {
+public class CuttingController : MonoBehaviour {
 
     public GameObject plane;
     Material mat;

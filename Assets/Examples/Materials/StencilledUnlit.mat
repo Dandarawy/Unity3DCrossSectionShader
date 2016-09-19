@@ -6,11 +6,11 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: OnePlaneCrossSection
-  m_Shader: {fileID: 4800000, guid: dfb2ef60de11e934f9e7571d2eb7bf08, type: 3}
+  m_Name: StencilledUnlit
+  m_Shader: {fileID: 4800000, guid: 88b9999b87b4fd146a176b8e5bccc481, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
@@ -19,7 +19,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 1926d72aee6ebef42b5e5b0b3c715026, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -139,16 +139,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 0, b: 0, a: 1}
-      data:
-        first:
-          name: _CrossColor
         second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _PlaneNormal
-        second: {r: 0, g: 1, b: 0, a: 0}
-      data:
-        first:
-          name: _PlanePosition
-        second: {r: 0, g: 0.5, b: 0, a: 1}

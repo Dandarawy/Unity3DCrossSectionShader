@@ -1,4 +1,4 @@
-﻿Shader "CrossSection/StandardGenericPartitioning" {
+﻿Shader "CrossSection/GenericThreePlanesBSP" {
 	Properties{
 		_Color("Color", Color) = (1,1,1,1)
 		_CrossColor("Cross Section Color", Color) = (1,1,1,1)
