@@ -14,7 +14,7 @@
 		//LOD 200
 		Stencil
 		{
-			Ref 1
+			Ref [_StencilMask]
 			CompBack Always
 			PassBack Replace
 

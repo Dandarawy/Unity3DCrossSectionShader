@@ -12,7 +12,7 @@
 		ZTest On
 		//Cull Off
 		Stencil{
-			Ref 1
+			Ref [_StencilMask]
 			Comp Equal
 		}
 		Pass
