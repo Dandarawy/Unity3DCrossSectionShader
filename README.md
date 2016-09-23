@@ -8,6 +8,9 @@ Simple cross section shaders can be used to cut part of meshes out.
 - Hatching using other plane mesh with the aid of stencil buffer.
 - Partitioning with three planes.
 
+##[Demo](https://dandarawy.github.io/Unity3D-Cross-Section-Shader-Demo/)
+
+
 ##Documentation
 Check [Wiki](https://github.com/Dandarawy/Unity3DCrossSectionShader/wiki) Section.
 
