@@ -16,4 +16,4 @@ Check [Wiki](https://github.com/Dandarawy/Unity3DCrossSectionShader/wiki) Sectio
 
 
 ##Asset store
-Download the latest unity package [Comming Soon](http://u3d.as/wma)
+Download the latest unity package from [Asset Store](http://u3d.as/wma)
