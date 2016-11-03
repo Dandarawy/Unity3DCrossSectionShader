@@ -33,11 +33,18 @@ public class GenericThreePlanesCuttingController : MonoBehaviour {
         position1 = plane1.transform.position;
         position2 = plane2.transform.position;
         position3 = plane3.transform.position;
-        rend.material.SetVector("_Plane1Normal", normal1);
-        rend.material.SetVector("_Plane1Position", position1);
-        rend.material.SetVector("_Plane2Normal", normal2);
-        rend.material.SetVector("_Plane2Position", position2);
-        rend.material.SetVector("_Plane3Normal", normal3);
-        rend.material.SetVector("_Plane3Position", position3);
+        for (int i = 0; i < rend.materials.Length; i++)
+        {
+            if (rend.materials[i].shader.name == "CrossSection/GenericThreePlanesBSP")
+            {
+                rend.materials[i].SetVector("_Plane1Normal", normal1);
+                rend.materials[i].SetVector("_Plane1Position", position1);
+                rend.materials[i].SetVector("_Plane2Normal", normal2);
+                rend.materials[i].SetVector("_Plane2Position", position2);
+                rend.materials[i].SetVector("_Plane3Normal", normal3);
+                rend.materials[i].SetVector("_Plane3Position", position3);
+            }
+        }
+        
     }
 }

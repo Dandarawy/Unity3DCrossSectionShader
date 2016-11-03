@@ -22,9 +22,17 @@ public class OnePlaneCuttingController : MonoBehaviour {
 
     private void UpdateShaderProperties()
     {
+
         normal = plane.transform.TransformVector(new Vector3(0, 0, -1));
         position = plane.transform.position;
-        rend.material.SetVector("_PlaneNormal", normal);
-        rend.material.SetVector("_PlanePosition", position);
+        for(int i=0;i<rend.materials.Length;i++)
+        {
+            if(rend.materials[i].shader.name== "CrossSection/OnePlaneBSP")
+            {
+                rend.materials[i].SetVector("_PlaneNormal", normal);
+                rend.materials[i].SetVector("_PlanePosition", position);
+            }
+        }
+        
     }
 }
