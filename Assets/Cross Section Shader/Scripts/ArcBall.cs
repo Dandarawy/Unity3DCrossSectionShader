@@ -10,7 +10,8 @@ public class ArcBall : MonoBehaviour
     public float radius = 5.0f,
             minRadius = 1.5f,
             maxRadius = 10.0f,
-            scale = 0.002f;
+            scale = 0.002f,
+            touchSensitivity=0.05f;
     public GameObject target;
     private float targetRadius = 8.0f,
             mouseX = 0.0f,
@@ -24,16 +25,27 @@ public class ArcBall : MonoBehaviour
     {
         this.transform.position = new Vector3(radius, 0.0f, 0.0f);
     }
-
+    Touch prevTouch0;
     // Update is called once per frame
     void Update()
     {
         newPosition = transform.position;
-        if (Input.GetMouseButton(0))
+        if (Input.touchCount > 0)
+        {
+            if (Input.touches[0].phase == TouchPhase.Began)
+            {
+                prevTouch0 = Input.touches[0];
+            }
+            mouseX = (Input.touches[0].position.x - prevTouch0.position.x) * touchSensitivity;
+            mouseZ = (Input.touches[0].position.y - prevTouch0.position.y) * touchSensitivity;
+            prevTouch0 = Input.touches[0];
+        }
+        else if (Input.GetMouseButton(0))
         {
             mouseX = Input.GetAxis("Mouse X");
             mouseZ = Input.GetAxis("Mouse Y");
         }
+        
         else {
             mouseX = Mathf.Lerp(mouseX, 0.0f, 0.2f);
             mouseZ = Mathf.Lerp(mouseZ, 0.0f, 0.2f);
